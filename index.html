@@ -5,47 +5,1052 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LUXE</title>
     <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
 </head>
 <body>
     <header>
-        <h1>LUXE</h1>
-        <h2>Piercing Parlor</h2>
-        <div class = "off-screen-menu">
-            <ul>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="#expert">Experts</a></li>
-                <li><a href="#shop">Jewelry</a></li>
-                <li><a href="#book">Booking</a></li>
-                <li><a href="#faq">FAQ</a></li>
-            </ul>
-        </div>
-        <nav>
-            <div class="ham-menu">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
+        <div class="menu">
+            <div class = "hidden-menu">
+                <ul>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#expert">Experts</a></li>
+                    <li><a href="#shop">Jewelry</a></li>
+                    <li><a href="#book">Booking</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                </ul>
             </div>
-        </nav>
+            <nav class="nav-bar">
+                <span class = "bus-name">
+                    <h1>LUXE</h1>
+                    <h2 class="title">Piercing Parlor</h2>                
+                </span>
+                <div class="ham-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+        <img class='header_img' src="src/newstudio.jpg" alt="studio">
     </header>
     <main>
-        <section id="home">
-            <h2>Home</h2>
-            <p>This is the home section.</p>
+        <section id="expert">
+            <h2>Meet Our Experts</h2>
+            <p class="p1">Meet the team of professionals dedicated to making your experience one of comfort and satisfaction.</p>
+            <div id="carouselExampleDark" class="carousel carousel-dark slide">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner s2-inner">
+                  <div class="carousel-item  s2-item active" data-bs-interval="10000">
+                    <div class="carousel-item-inner">
+                        <img src="src/pf3.jpg" class="pf" alt="Anya Jones">
+                        <div class="carousel-profile">
+                            <p>Hello Everyone!</p>
+                            <section><p>I'm <b>Anya Jones</b>, your expert piercer at Luxe. With over a decade of experience, I understand that getting a new peircing can be daunting. My goal is to make you feel comfortable and confident throughout the process, ensuring a safe and enjoyable experience.</p></section>
+                            <br></br>
+                            <button class="profile-btn" onclick="seeProfile('Anya')">See Profile</button>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="carousel-item s2-item" data-bs-interval="2000">
+                    <div class="carousel-item-inner">
+                        <img src="src/pf2.jpg" class="pf" alt="Victor Sheldon">
+                        <div class="carousel-profile">
+                            <p>Hello Everyone!</p>
+                            <section><p>My name is <b>Victor Sheldon</b>, your expert piercer at Luxe. With over a decade of experience, I understand that getting a new peircing can be daunting. My goal is to make you feel comfortable and confident throughout the process, ensuring a safe and enjoyable experience.</p></section>
+                            <br></br>
+                            <button class="profile-btn" onclick="seeProfile('Victor')">See Profile</button>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="carousel-item s2-item">
+                    <div class="carousel-item-inner">
+                        <img src="src/pf4.jpg" class="pf" alt="Naomi Lustre">
+                        <div class="carousel-profile">
+                            <p>Hello Everyone!</p>
+                            <section><p>I'm <b>Naomi Lustre</b>, your expert piercer at Luxe. With over a decade of experience, I understand that getting a new peircing can be daunting. My goal is to make you feel comfortable and confident throughout the process, ensuring a safe and enjoyable experience.</p></section>
+                            <br></br>
+                            <button class="profile-btn" onclick="seeProfile('Naomi')">See Profile</button>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+
+              <div class="modal" id="modal3" tabindex="-1">
+                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="md3"></h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <!-- Expert Anya -->
+                            <div class="pimg active" id="p-Anya">
+                                <section>
+                                    <img src="src/o4.jpg" class="d-block w-100" alt="...">
+                                    <img src="src/p1.jpg" class="d-block w-100" alt="...">                            
+                                </section>
+                                <section>
+                                    <img src="src/p2.jpg" class="d-block w-100" alt="...">
+                                    <img src="src/p6.jpg" class="d-block w-100" alt="...">                            
+                                </section>
+                                <div>
+                                    <div class="review-container">
+                                        <h3>Leave a Review</h3>
+                                        <form id="review-form-Anya">
+                                            <div class="star-rating">
+                                                <input type="radio" id="star5-Anya" name="rating-Anya" value="5"><label for="star5-Anya" title="5 stars">★</label>
+                                                <input type="radio" id="star4-Anya" name="rating-Anya" value="4"><label for="star4-Anya" title="4 stars">★</label>
+                                                <input type="radio" id="star3-Anya" name="rating-Anya" value="3"><label for="star3-Anya" title="3 stars">★</label>
+                                                <input type="radio" id="star2-Anya" name="rating-Anya" value="2"><label for="star2-Anya" title="2 stars">★</label>
+                                                <input type="radio" id="star1-Anya" name="rating-Anya" value="1"><label for="star1-Anya" title="1 star">★</label>
+                                            </div>
+                                            <textarea id="review-text-Anya" name="review" rows="4" placeholder="Write your review here..."></textarea>
+                                            <button type="submit" class="submit-btn">Submit Review</button>
+                                        </form>
+                                    </div>
+                                    <div class="reviews-display">
+                                        <div id="reviews-list-Anya"></div>
+                                    </div>
+                                </div>
+                            </div>
+            
+                            <!-- Expert Victor -->
+                            <div class="pimg" id="p-Victor">
+                                <section>
+                                    <img src="src/p10.jpg" class="d-block w-100" alt="...">
+                                    <img src="src/p11.jpg" class="d-block w-100" alt="...">                            
+                                </section>
+                                <section>
+                                    <img src="src/p12.jpg" class="d-block w-100" alt="...">
+                                    <img src="src/p4.jpg" class="d-block w-100" alt="...">                            
+                                </section>
+                                <div>
+                                    <div class="review-container">
+                                        <h3>Leave a Review</h3>
+                                        <form id="review-form-Victor">
+                                            <div class="star-rating">
+                                                <input type="radio" id="star5-Victor" name="rating-Victor" value="5"><label for="star5-Victor" title="5 stars">★</label>
+                                                <input type="radio" id="star4-Victor" name="rating-Victor" value="4"><label for="star4-Victor" title="4 stars">★</label>
+                                                <input type="radio" id="star3-Victor" name="rating-Victor" value="3"><label for="star3-Victor" title="3 stars">★</label>
+                                                <input type="radio" id="star2-Victor" name="rating-Victor" value="2"><label for="star2-Victor" title="2 stars">★</label>
+                                                <input type="radio" id="star1-Victor" name="rating-Victor" value="1"><label for="star1-Victor" title="1 star">★</label>
+                                            </div>
+                                            <textarea id="review-text-Victor" name="review" rows="4" placeholder="Write your review here..."></textarea>
+                                            <button type="submit" class="submit-btn">Submit Review</button>
+                                        </form>
+                                    </div>
+                                    <div class="reviews-display">
+                                        <div id="reviews-list-Victor"></div>
+                                    </div>
+                                </div>
+                            </div>
+            
+                            <!-- Expert Naomi -->
+                            <div class="pimg" id="p-Naomi">
+                                <section>
+                                    <img src="src/p18.jpg" class="d-block w-100" alt="...">
+                                    <img src="src/p15.jpg" class="d-block w-100" alt="...">                            
+                                </section>
+                                <section>
+                                    <img src="src/p13.jpg" class="d-block w-100" alt="...">
+                                    <img src="src/p16.jpg" class="d-block w-100" alt="...">                            
+                                </section>
+                                <div>
+                                    <div class="review-container">
+                                        <h3>Leave a Review</h3>
+                                        <form id="review-form-Naomi">
+                                            <div class="star-rating">
+                                                <input type="radio" id="star5-Naomi" name="rating-Naomi" value="5"><label for="star5-Naomi" title="5 stars">★</label>
+                                                <input type="radio" id="star4-Naomi" name="rating-Naomi" value="4"><label for="star4-Naomi" title="4 stars">★</label>
+                                                <input type="radio" id="star3-Naomi" name="rating-Naomi" value="3"><label for="star3-Naomi" title="3 stars">★</label>
+                                                <input type="radio" id="star2-Naomi" name="rating-Naomi" value="2"><label for="star2-Naomi" title="2 stars">★</label>
+                                                <input type="radio" id="star1-Naomi" name="rating-Naomi" value="1"><label for="star1-Naomi" title="1 star">★</label>
+                                            </div>
+                                            <textarea id="review-text-Naomi" name="review" rows="4" placeholder="Write your review here..."></textarea>
+                                            <button type="submit" class="submit-btn">Submit Review</button>
+                                        </form>
+                                    </div>
+                                    <div class="reviews-display">
+                                        <div id="reviews-list-Naomi"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
-        <section id="about">
-            <h2>About</h2>
-            <p>This is the about section.</p>
+        <section id="shop">
+            <h2>Browse Our Shop</h2>
+            <p class="p1">Transform your look with premium peircing Jewelry crafted from surgical steel, titatnium, and 14 to 18k gold. Visit us in-store and get an exclusive 15% off your first purchase!</p>
+            
+            <div class="containor-shop">
+                <div class="containor-pages">
+                    <!-- Page 1 -->
+                    <div class="col-lg-4" id="page1">
+                        <div  class="col-lg-4-inner">
+                            <div class="shop-item">
+                                <img src="src/j1.jpg" alt="...">
+                                <section>
+                                    <h5>Chunky Hoop Earrings</h5>
+                                    <p>$69.00 CAD</p>  
+                                    <label class="form-check-label" for="flexRadioDefaultG1" id="labelText1">Gold</label>
+                                    <section class="radio-metal">
+                                        <div class="form-check">
+                                            <input class="form-check-input form-check-inputG" type="radio" name="flexRadioDefault1" id="flexRadioDefaultG1" onchange="updateLabel('Gold','labelText1')" checked>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input form-check-inputS" type="radio" name="flexRadioDefault1" id="flexRadioDefaultS1" onchange="updateLabel('Silver','labelText1')">
+                                        </div>
+                                    </section>
+                                </section>
+                            </div>
+                            <div class="shop-item">
+                                <img src="src/j2.jpg" alt="...">
+                                <section>
+                                    <h5>Swarovski Butterfly Earrings</h5>
+                                    <p>$72.00 CAD</p>  
+                                    <label class="form-check-label" for="flexRadioDefaultG2" id="labelText2">Gold</label>
+                                    <section class="radio-metal">
+                                        <div class="form-check">
+                                            <input class="form-check-input form-check-inputG" type="radio" name="flexRadioDefault2" id="flexRadioDefaultG2" onchange="updateLabel('Gold','labelText2')" checked>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input form-check-inputS" type="radio" name="flexRadioDefault2" id="flexRadioDefaultS2" onchange="updateLabel('Silver','labelText2')">
+                                        </div>
+                                    </section>
+                                </section>
+                            </div>
+                        </div>
+                        <div  class="col-lg-4-inner">
+                            <div class="shop-item">
+                                <img src="src/j3.jpg" alt="...">
+                                <section>
+                                    <h5>Swarovski Dangling Earrings</h5>
+                                    <p>$62.00 CAD</p>  
+                                    <label class="form-check-label" for="flexRadioDefaultG3" id="labelText3">Silver</label>
+                                    <section class="radio-metal">
+                                        <div class="form-check">
+                                            <input class="form-check-input form-check-inputS" type="radio" name="flexRadioDefault3" id="flexRadioDefaultS3" onchange="updateLabel('Silver','labelText3')" checked>
+                                        </div>
+                                    </section>
+                                </section>
+                            </div>
+                            <div class="shop-item">
+                                <img src="src/j4.jpg" alt="...">
+                                <section>
+                                    <h5>Emerald Stud Earrings</h5>
+                                    <p>$149.00 CAD</p>  
+                                    <label class="form-check-label" for="flexRadioDefaultG4" id="labelText4">Gold</label>
+                                    <section class="radio-metal">
+                                        <div class="form-check">
+                                            <input class="form-check-input form-check-inputG" type="radio" name="flexRadioDefault4" id="flexRadioDefaultG4" onchange="updateLabel('Gold','labelText4')" checked>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input form-check-inputS" type="radio" name="flexRadioDefault4" id="flexRadioDefaultS4" onchange="updateLabel('Silver','labelText4')">
+                                        </div>
+                                    </section>
+                                </section>
+                            </div>
+                        </div>
+                        <div  class="col-lg-4-inner">
+                            <div class="shop-item">
+                                <img src="src/j5.jpg" alt="...">
+                                <section>
+                                    <h5>Emerald Flower Stud Earrings</h5>
+                                    <p>$239.00 CAD</p>  
+                                    <label class="form-check-label" for="flexRadioDefaultG5" id="labelText5">Gold</label>
+                                    <section class="radio-metal">
+                                        <div class="form-check">
+                                            <input class="form-check-input form-check-inputG" type="radio" name="flexRadioDefault5" id="flexRadioDefaultG5" onchange="updateLabel('Gold','labelText5')" checked>
+                                        </div>
+                                    </section>
+                                </section>
+                            </div>
+                            <div class="shop-item">
+                                <img src="src/j6.jpg" alt="...">
+                                <section>
+                                    <h5>Feather Earrings</h5>
+                                    <p>$56.00 CAD</p>  
+                                    <label class="form-check-label" for="flexRadioDefaultG6" id="labelText6">Gold</label>
+                                    <section class="radio-metal">
+                                        <div class="form-check">
+                                            <input class="form-check-input form-check-inputG" type="radio" name="flexRadioDefault6" id="flexRadioDefaultG6" onchange="updateLabel('Gold','labelText6')" checked>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input form-check-inputS" type="radio" name="flexRadioDefault6" id="flexRadioDefaultS6" onchange="updateLabel('Silver','labelText6')">
+                                        </div>
+                                    </section>
+                                </section>
+                            </div>
+                        </div>    
+                    </div>
+                    
+                    <!-- Page 2 -->
+                    <div class="col-lg-4 d-none" id="page2">
+                        <div  class="col-lg-4-inner">
+                        <div class="shop-item">
+                            <img src="src/j7.jpg" alt="...">
+                            <section>
+                                <h5>Pearl Dangling Earrings</h5>
+                                <p>$70.00 CAD</p>
+                                <label class="form-check-label" for="flexRadioDefaultG7" id="labelText7">Gold</label>
+                                <section class="radio-metal">
+                                    <div class="form-check">
+                                        <input class="form-check-input form-check-inputG" type="radio" name="flexRadioDefault7" id="flexRadioDefaultG7" onchange="updateLabel('Gold','labelText7')" checked>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input form-check-inputS" type="radio" name="flexRadioDefault7" id="flexRadioDefaultS7" onchange="updateLabel('Silver','labelText7')">
+                                    </div>
+                                </section>
+                            </section>
+                        </div>
+                        <div class="shop-item">
+                            <img src="src/j8.jpg" alt="...">
+                            <section>
+                                <h5>Geometric Hoop Earrings</h5>
+                                <p>$32.00 CAD</p>
+                                <label class="form-check-label" for="flexRadioDefaultG8" id="labelText8">Gold</label>
+                                <section class="radio-metal">
+                                    <div class="form-check">
+                                        <input class="form-check-input form-check-inputG" type="radio" name="flexRadioDefault8" id="flexRadioDefaultG8" onchange="updateLabel('Gold','labelText8')" checked>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input form-check-inputS" type="radio" name="flexRadioDefault8" id="flexRadioDefaultS8" onchange="updateLabel('Silver','labelText8')">
+                                    </div>
+                                </section>
+                            </section>
+                        </div>
+                    </div>
+                    <div  class="col-lg-4-inner">
+                        <div class="shop-item">
+                            <img src="src/j9.jpg" alt="...">
+                            <section>
+                                <h5>Geometric Dangling Earrings</h5>
+                                <p>$56.00 CAD</p>
+                                <label class="form-check-label" for="flexRadioDefaultG9" id="labelText9">Gold</label>
+                                <section class="radio-metal">
+                                    <div class="form-check">
+                                        <input class="form-check-input form-check-inputG" type="radio" name="flexRadioDefault9" id="flexRadioDefaultG9" onchange="updateLabel('Gold','labelText9')" checked>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input form-check-inputS" type="radio" name="flexRadioDefault9" id="flexRadioDefaultS9" onchange="updateLabel('Silver','labelText9')">
+                                    </div>
+                                </section>
+                            </section>
+                        </div>
+                        <div class="shop-item">
+                            <img src="src/j10.jpg" alt="...">
+                            <section>
+                                <h5>Sims Dangling Earrings</h5>
+                                <p>$35.00 CAD</p>
+                                <label class="form-check-label" for="flexRadioDefaultG10" id="labelText10">Gold</label>
+                                <section class="radio-metal">
+                                    <div class="form-check">
+                                        <input class="form-check-input form-check-inputG" type="radio" name="flexRadioDefault10" id="flexRadioDefaultG20" onchange="updateLabel('Gold','labelText10')" checked>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input form-check-inputS" type="radio" name="flexRadioDefault10" id="flexRadioDefaultS10" onchange="updateLabel('Silver','labelText10')">
+                                    </div>
+                                </section>
+                            </section>
+                        </div>
+                    </div>
+                    <div  class="col-lg-4-inner">
+                        <div class="shop-item">
+                            <img src="src/j11.jpg" alt="...">
+                            <section>
+                                <h5>Ruby Dangling Earrings</h5>
+                                <p>$230.00 CAD</p>
+                                <label class="form-check-label" for="flexRadioDefaultG11" id="labelText11">Gold</label>
+                                <section class="radio-metal">
+                                    <div class="form-check">
+                                        <input class="form-check-input form-check-inputG" type="radio" name="flexRadioDefault11" id="flexRadioDefaultG11" onchange="updateLabel('Gold','labelText11')" checked>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input form-check-inputS" type="radio" name="flexRadioDefault11" id="flexRadioDefaultS11" onchange="updateLabel('Silver','labelText11')">
+                                    </div>
+                                </section>
+                            </section>
+                        </div>
+                        <div class="shop-item">
+                            <img src="src/j12.jpg" alt="...">
+                            <section>
+                                <h5>Ruby Dangling Earrings</h5>
+                                <p>$330.00 CAD</p>
+                                <label class="form-check-label" for="flexRadioDefaultG12" id="labelText12">Gold</label>
+                                <section class="radio-metal">
+                                    <div class="form-check">
+                                        <input class="form-check-input form-check-inputG" type="radio" name="flexRadioDefault12" id="flexRadioDefaultG12" onchange="updateLabel('Gold','labelText12')" checked>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input form-check-inputS" type="radio" name="flexRadioDefault12" id="flexRadioDefaultS12" onchange="updateLabel('Silver','labelText12')">
+                                    </div>
+                                </section>
+                            </section>
+                        </div>
+                    </div>
+                    </div>
+
+                    <!-- Page 3 -->
+                    <div class="col-lg-4 d-none" id="page3">
+                        <div  class="col-lg-4-inner">
+                        <div class="shop-item">
+                            <img src="src/j13.jpg" alt="...">
+                            <section>
+                                <h5>Circular Barbell Septum</h5>
+                                <p>$25.00 CAD</p>
+                                <label class="form-check-label" for="flexRadioDefaultG13" id="labelText13">Gold</label>
+                                <section class="radio-metal">
+                                    <div class="form-check">
+                                        <input class="form-check-input form-check-inputG" type="radio" name="flexRadioDefault13" id="flexRadioDefaultG13" onchange="updateLabel('Gold','labelText13')" checked>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input form-check-inputS" type="radio" name="flexRadioDefault13" id="flexRadioDefaultS13" onchange="updateLabel('Silver','labelText13')">
+                                    </div>
+                                </section>
+                            </section>
+                        </div>
+                        <div class="shop-item">
+                            <img src="src/j14.jpg" alt="...">
+                            <section>
+                                <h5>Captive Bead Ring</h5>
+                                <p>$23.00 CAD</p>
+                                <label class="form-check-label" for="flexRadioDefaultG14" id="labelText14">Gold</label>
+                                <section class="radio-metal">
+                                    <div class="form-check">
+                                        <input class="form-check-input form-check-inputG" type="radio" name="flexRadioDefault14" id="flexRadioDefaultG14" onchange="updateLabel('Gold','labelText14')" checked>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input form-check-inputS" type="radio" name="flexRadioDefault14" id="flexRadioDefaultS14" onchange="updateLabel('Silver','labelText14')">
+                                    </div>
+                                </section>
+                            </section>
+                        </div>
+                    </div>
+                    <div  class="col-lg-4-inner">
+                        <div class="shop-item">
+                            <img src="src/j15.jpg" alt="...">
+                            <section>
+                                <h5>Swarovski Nose Stud</h5>
+                                <p>$45.00 CAD</p>
+                                <label class="form-check-label" for="flexRadioDefaultG15" id="labelText15">Gold</label>
+                                <section class="radio-metal">
+                                    <div class="form-check">
+                                        <input class="form-check-input form-check-inputG" type="radio" name="flexRadioDefault15" id="flexRadioDefaultG15" onchange="updateLabel('Gold','labelText15')" checked>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input form-check-inputS" type="radio" name="flexRadioDefault15" id="flexRadioDefaultS15" onchange="updateLabel('Silver','labelText15')">
+                                    </div>
+                                </section>
+                            </section>
+                        </div>
+                        <div class="shop-item">
+                            <img src="src/j16.jpg" alt="...">
+                            <section>
+                                <h5>Flower Clicker Septum</h5>
+                                <p>$55.00 CAD</p>
+                                <label class="form-check-label" for="flexRadioDefaultG16" id="labelText16">Gold</label>
+                                <section class="radio-metal">
+                                    <div class="form-check">
+                                        <input class="form-check-input form-check-inputG" type="radio" name="flexRadioDefault16" id="flexRadioDefaultG16" onchange="updateLabel('Gold','labelText16')" checked>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input form-check-inputS" type="radio" name="flexRadioDefault16" id="flexRadioDefaultS16" onchange="updateLabel('Silver','labelText16')">
+                                    </div>
+                                </section>
+                            </section>
+                        </div>
+                    </div>
+                    <div  class="col-lg-4-inner">
+                        <div class="shop-item">
+                            <img src="src/j17.jpg" alt="...">
+                            <section>
+                                <h5>Swarovski Clicker Septum</h5>
+                                <p>$63.00 CAD</p>
+                                <label class="form-check-label" for="flexRadioDefaultG17" id="labelText17">Gold</label>
+                                <section class="radio-metal">
+                                    <div class="form-check">
+                                        <input class="form-check-input form-check-inputG" type="radio" name="flexRadioDefault17" id="flexRadioDefaultG17" onchange="updateLabel('Gold','labelText17')" checked>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input form-check-inputS" type="radio" name="flexRadioDefault17" id="flexRadioDefaultS17" onchange="updateLabel('Silver','labelText17')">
+                                    </div>
+                                </section>
+                            </section>
+                        </div>
+                        <div class="shop-item">
+                            <img src="src/j18.jpg" alt="...">
+                            <section>
+                                <h5>Geometric Clicker Septum</h5>
+                                <p>$44.00 CAD</p>
+                                <label class="form-check-label" for="flexRadioDefaultG18" id="labelText18">Gold</label>
+                                <section class="radio-metal">
+                                    <div class="form-check">
+                                        <input class="form-check-input form-check-inputG" type="radio" name="flexRadioDefault18" id="flexRadioDefaultG18" onchange="updateLabel('Gold','labelText18')" checked>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input form-check-inputS" type="radio" name="flexRadioDefault18" id="flexRadioDefaultS18" onchange="updateLabel('Silver','labelText18')">
+                                    </div>
+                                </section>
+                            </section>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="pagination-container">
+                        <nav class="nav-shop" aria-label="...">
+                            <ul class="pagination">
+                                <li class="page-item disabled" id="prev">
+                                    <a class="page-link" onclick="navShop(0,true,false)">Prev</a>
+                                </li>
+                                <li class="page-item" id="btn1"><a class="page-link active" onclick="navShop(1,false,false)">1</a></li>
+                                <li class="page-item" id="btn2"><a class="page-link" onclick="navShop(2,false,false)">2</a></li>
+                                <li class="page-item" id="btn3"><a class="page-link" onclick="navShop(3,false,false)">3</a></li>
+                                <li class="page-item" id="next">
+                                    <a class="page-link" onclick="navShop(0,false,true)">Next</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
         </section>
+
+        
+        <section id="book">
+            <h2>Book an Appointment</h2>
+            <p class="p1">No walk-ins availible! Be sure to schedule an appointment in advance</p>
+
+
+                <div class="row mx-auto my-auto justify-content-center">
+                    <div id="recipeCarousel" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner c3-inner" role="listbox">
+                            <div class="carousel-item c3-item active">
+                                <div class="card">
+                                    <img src="src/o1.jpg" class="d-block w-100" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Tongue Piercing - $50</h5>
+                                        <p class="card-text">Takes about 4-8 weeks to heal.</p>
+                                        <button class="book-btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop" onclick="setDropVal('Tongue Piercing - $50')">Book</button>
+                                    </div>
+                                </div>                                  
+                            </div>
+                            <div class="carousel-item c3-item">
+                                <div class="card">
+                                    <img src="src/p3.jpg" class="d-block w-100" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Eyebrow Piercing - $40</h5>
+                                        <p class="card-text">Takes about 6-8 weeks to heal.</p>
+                                        <button class="book-btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop" onclick="setDropVal('Eyebrow Piercing - $40')">Book</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item c3-item">
+                                <div class="card">
+                                    <img src="src/p5.jpg" class="d-block w-100" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Septum Piercing - $40</h5>
+                                        <p class="card-text">Takes about 3-4 months to heal.</p>
+                                        <button class="book-btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop" onclick="setDropVal('Septum Piercing - $40')">Book</button>
+                                    </div>
+                                </div> 
+                            </div>
+                            <div class="carousel-item c3-item">
+                                <div class="card">
+                                    <img src="src/p7.jpg" class="d-block w-100" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Nasallang Piercing - $60</h5>
+                                        <p class="card-text">Takes 5-6 months to heal.</p>
+                                        <button class="book-btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop" onclick="setDropVal('Nasallang Piercing - $60')">Book</button>
+                                    </div>
+                                </div> 
+                            </div>
+                            <div class="carousel-item c3-item">
+                                <div class="card">
+                                    <img src="src/o4.jpg" class="d-block w-100" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Lobe Piercing - $20</h5>
+                                        <p class="card-text">Takes 3-6 weeks to heal.</p>
+                                        <button class="book-btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop" onclick="setDropVal('Lobe Piercing - $20')">Book</button>
+                                    </div>
+                                </div>  
+                            </div>
+                            <div class="carousel-item c3-item">
+                                <div class="card">
+                                    <img src="src/p9.jpg" class="d-block w-100" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Lip Piercing - $60</h5>
+                                        <p class="card-text">Takes 4-8 weeks to heal.</p>
+                                        <button class="book-btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop" onclick="setDropVal('Lip Piercing - $60')">Book</button>
+                                    </div>
+                                </div> 
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev bg-transparent w-aut" href="#recipeCarousel" role="button" data-bs-slide="prev">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="#000" class="bi bi-chevron-left" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0"/>
+                            </svg>
+                        </a>
+                        <a class="carousel-control-next bg-transparent w-aut" href="#recipeCarousel" role="button" data-bs-slide="next">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="#000" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            <!-- Modal -->
+                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="staticBackdropLabel">Booking Form</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body" id="modal-b">
+                                <p>Please fill out the form below to book an appointment</p>
+                                <p id="minfo"></p>
+                                <div class="dropdown">
+                                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Dropdown button
+                                    </button>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                        <a class="dropdown-item" onclick="setDropVal('Tongue Piercing - $50')">Tongue Piercing - $50</a>
+                                        <a class="dropdown-item" onclick="setDropVal('Eyebrow Piercing - $40')">Eyebrow Piercing - $40</a>
+                                        <a class="dropdown-item" onclick="setDropVal('Septum Piercing - $40')">Septum Piercing - $40</a>
+                                        <a class="dropdown-item" onclick="setDropVal('Nasallang Piercing - $60')">Nasallang Piercing - $60</a>
+                                        <a class="dropdown-item" onclick="setDropVal('Lobe Piercing - $20')">Lobe Piercing - $20</a>
+                                        <a class="dropdown-item" onclick="setDropVal('Lip Piercing - $60')">Lip Piercing - $60</a>
+                                    </div>
+                                </div>
+                            
+                            <div class="name-email">
+                                <div>
+                                    <label for="nameInput" class="form-label">First Name</label>
+                                    <input type="text" class="form-control" id="fname">
+                                    <label for="nameInput" class="form-label">Last Name</label>
+                                    <input type="text" class="form-control" id="lname">
+                                </div>
+                                <div>
+                                    <label for="nameInput" class="form-label">Email</label>
+                                    <input type="text" class="form-control" id="email">
+                                    <label for="nameInput" class="form-label">Confirm Email</label>
+                                    <input type="text" class="form-control" id="cemail">
+                                </div>
+                            </div>
+                            <p>Select an expert and availibility</p>
+                            <div>
+                                <button type="button" class="btn-expert active" id="btn-A" onclick="selExper('btn-A')">Anya Jones</button>
+                                <button type="button" class="btn-expert" id="btn-B" onclick="selExper('btn-B')">Victor Sheldon</button>
+                                <button type="button" class="btn-expert" id="btn-C" onclick="selExper('btn-C')">Naomi Lustre</button>
+                            </div>
+                        
+                            <section class="container-2">
+                                <form>
+                                    <div class="row form-group">
+                                        <label for="date" class="col-sm-1 col-form-label">Date</label>
+                                        <div class="col-sm-4">
+                                            <div class="input-group date" id="datepicker">
+                                                <input type="text" class="form-control" id="dt">
+                                                <span class="input-group-append">
+                                                    <span class="input-group-text bg-white">
+                                                        <i class="fa fa-calendar"></i>
+                                                    </span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </section>
+                            <script type="text/javascript">
+                                $(function() {
+                                    $('#datepicker').datepicker();
+                                });
+                            </script>
+
+                            <div class="timetable">
+                                <div>
+                                    <label>Morning</label>
+                                    <button type="button" class="btn-time active" id="btn-1" onclick="selTime('btn-1')">9:00-9:30</button>
+                                    <button type="button" class="btn-time" id="btn-2" onclick="selTime('btn-2')">9:30-10:00</button>
+                                    <button type="button" class="btn-time" id="btn-3" onclick="selTime('btn-3')">10:00-10:30</button>
+                                    <button type="button" class="btn-time" id="btn-4" onclick="selTime('btn-4')">10:30-11:00</button>
+                                    <button type="button" class="btn-time" id="btn-5" onclick="selTime('btn-5')">11:00-11:30</button>
+                                    <button type="button" class="btn-time" id="btn-6" onclick="selTime('btn-6')">11:30-12:00</button>
+                                </div>
+                                <div>
+                                    <label>Afternoon</label>
+                                    <button type="button" class="btn-time" id="btn-7" onclick="selTime('btn-7')">12:00-12:30</button>
+                                    <button type="button" class="btn-time" id="btn-8" onclick="selTime('btn-8')">12:30-1:00</button>
+                                    <button type="button" class="btn-time" id="btn-9" onclick="selTime('btn-9')">1:00-1:30</button>
+                                    <button type="button" class="btn-time" id="btn-10" onclick="selTime('btn-10')">1:30-2:00</button>
+                                    <button type="button" class="btn-time" id="btn-11" onclick="selTime('btn-11')">2:00-2:30</button>
+                                    <button type="button" class="btn-time" id="btn-12" onclick="selTime('btn-12')">2:30-3:00</button>
+                                    <button type="button" class="btn-time" id="btn-13" onclick="selTime('btn-13')">3:00-3:30</button>
+                                    <button type="button" class="btn-time" id="btn-14" onclick="selTime('btn-14')">3:30-4:00</button>
+                                </div>
+                                <div>
+                                    <label>Evening</label>
+                                    <button type="button" class="btn-time" id="btn-15" onclick="selTime('btn-15')">4:00-4:30</button>
+                                    <button type="button" class="btn-time" id="btn-16" onclick="selTime('btn-16')">4:30-5:00</button>
+                                    <button type="button" class="btn-time" id="btn-17" onclick="selTime('btn-17')">5:00-5:30</button>
+                                    <button type="button" class="btn-time" id="btn-18" onclick="selTime('btn-18')">5:30-6:00</button>
+                                    <button type="button" class="btn-time" id="btn-19" onclick="selTime('btn-19')">6:00-6:30</button>
+                                    <button type="button" class="btn-time" id="btn-20" onclick="selTime('btn-20')">6:30-7:00</button>
+                                    <button type="button" class="btn-time" id="btn-21" onclick="selTime('btn-21')">7:00-7:30</button>
+                                    <button type="button" class="btn-time" id="btn-22" onclick="selTime('btn-22')">8:30-8:00</button>
+                                </div>
+                            </div>
+                            <label><b>Before You Book!</b></label>
+                            <div class="tos-par">
+                                <p>Welcome to Luxe Piercing Parlor. By booking an appointment with us, you agree to comply with the following Terms of Service. These terms are established to ensure a safe, professional, and enjoyable experience for every client. At Luxe Piercing Parlor, we offer a wide array of professional piercing services, performed by highly trained and certified piercers. Our services range from ear and body piercings to jewelry consultations and changes. We maintain the highest standards of hygiene and safety, using only sterilized or single-use equipment.</p>
+
+                                <p>Appointments can be made online, by phone, or in person. We recommend booking your appointment at least 48 hours in advance to ensure availability. A non-refundable deposit of $50 is required to secure your booking. This deposit will be credited towards your total service cost. Should you need to cancel or reschedule, please inform us at least 24 hours before your appointment. Late cancellations or no-shows will result in the forfeiture of your deposit. If you arrive more than 15 minutes late, your appointment may need to be rescheduled, and additional charges may apply.</p>
+                            
+                                <p>All pricing for our services and premium jewelry options are listed on our website and are subject to change. Full payment is required at the time of service. We accept cash, credit/debit cards, and digital payment methods. We adhere to industry-leading sterilization protocols to ensure a safe environment. Our piercers use gloves and sterile equipment for every procedure. You are required to disclose any medical conditions, allergies, or medications that could impact the piercing process or healing. If you are feeling unwell, please reschedule your appointment to ensure the best experience.</p>
+                            
+                                <p>Clients must meet the legal age requirements for specific piercings. For clients under 18 years old, a parent or legal guardian must accompany them and complete the necessary consent forms. Before proceeding with any service, you will be asked to sign a waiver acknowledging the risks associated with piercing and releasing Luxe Piercing Parlor from liability for any complications or adverse outcomes. We provide detailed aftercare instructions to promote proper healing and avoid complications. It is essential to follow these guidelines closely. Should you have any concerns or require a follow-up appointment, we are here to support you throughout the healing process. Please contact us if you experience any issues.</p>
+                            
+                                <p>Due to the personal nature of our services, refunds are not available once a service has been rendered. However, customer satisfaction is our priority, and we encourage you to reach out with any concerns so we can address them promptly. Any complaints or issues should be reported as soon as possible so we can resolve them to your satisfaction. By booking with Luxe Piercing Parlor, you confirm that you have read, understood, and agree to these Terms of Service. For any questions or further information, please contact us at the details below.</p>            
+                            </div>
+                            <div class="tos-check">
+                                <input type="checkbox" id="chk"></input>
+                                <label id="chk-lbl">I have read and agree to the terms of service</label>
+                            </div>
+                            <button type="button" class="confirm-btn" onclick="verify()">Confirm Booking</button>
+                            </div>
+                            <div class="modal-footer">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal" id="modal2" tabindex="-1">
+                    <div class="modal-dialog modal-dialog-centered">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title">Booking Successful!</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body" id="mb2">
+                          <p>Your booking for a <b id="cpiercing"></b> with <b id="cexpert"></b> has been successfully scheduled for <b id="ctime"></b> on <b id="cdate"></b>. Would you like to return to the homepage?</p>
+                          <button type="button" class="btn btn-secondary" id="btn-m2" data-bs-dismiss="modal">Take me back</button>
+                        </div>
+                        <div class="modal-footer">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+            </div>
+        </section>
+
         <section id="contact">
-            <h2>Contact</h2>
-            <p>This is the contact section.</p>
+            <h2>Contact Us</h2>
+            <p class="p1">Have any questions? Our staff are here to help.</p>
+            <div class="wrap-contact">
+                <div class="contact-container">
+                    <!-- Phone Section -->
+                    <div class="contact-section">
+                        <i class="bi bi-telephone-fill"></i>
+                        <span class="contact-text">777-777-7777</span>
+                    </div>
+                    <!-- Email Section -->
+                    <div class="contact-section">
+                        <i class="bi bi-envelope-fill"></i>
+                        <span class="contact-text">luxepiercing@gmail.com</span>
+                    </div>
+                    <!-- Location Section -->
+                    <div class="contact-section">
+                        <i class="bi bi-geo-alt-fill"></i>
+                        <span class="contact-text">777 Aberdeen Drive</span>
+                    </div>
+                </div>
+                
+                <div style="max-width:100%;list-style:none; transition: none;overflow:hidden;width:100%;height:500px;"><div id="gmap-canvas" style="height:100%; width:100%;max-width:100%;"><iframe style="height:100%;width:100%;border:0;" frameborder="0" src="https://www.google.com/maps/embed/v1/place?q=45.39230658792307,+-75.7379241776052&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"></iframe></div><a class="google-map-html" href="https://kbj9qpmy.com/hrn" id="get-map-data">InMotion Hosting</a><style>#gmap-canvas img.text-marker{max-width:none!important;background:none!important;}img{max-width:none}</style></div>
+                <div class="hour-container">
+                    <div class="hour-section">
+                        <span class="hour-text"><b>Monday-Friday</b></span>
+                        <span class="hour-text">9:00am - 8:00pm</span>  
+                    </div>
+                    <div class="hour-section">
+                        <span class="hour-text"><b>Saturday-Sunday</b></span>
+                        <span class="hour-text">11:00am - 5:00pm</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="faq">
+            <h2>Learn More From Our FAQ</h2>
+             <!-- Section: Before You Book -->
+            <h3>Before You Book</h3>
+            <div class="accordion accordion-flush" id="accordionBeforeBook">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseBeforeBook1" aria-expanded="false" aria-controls="collapseBeforeBook1">
+                            Valid Forms of ID
+                        </button>
+                    </h2>
+                    <div id="collapseBeforeBook1" class="accordion-collapse collapse" data-bs-parent="#accordionBeforeBook">
+                        <div class="accordion-body">
+                            <section id="id-requirements">
+                                <p>
+                                    To ensure a safe and compliant experience at our studio, we require all clients, and parents or legal guardians of minors aged 10-15, to present a physical government-issued ID at their appointment. Parents or guardians must also be present to sign necessary legal documents on the day of the appointment.
+                                </p>
+                            
+                                <h5>Accepted Forms of ID:</h5>
+                                <ul>
+                                    <li>Passport</li>
+                                    <li>Driver's License</li>
+                                    <li>Birth Certificate* (with supporting photo ID)</li>
+                                    <li>Ontario Photo ID Card</li>
+                                    <li>Status Card</li>
+                                    <li>Nexus</li>
+                                    <li>Firearm License</li>
+                                </ul>
+                                <p>
+                                    *Note: Birth certificates alone are insufficient. They must be accompanied by a photo ID.
+                                </p>
+                                <p>
+                                    <strong>Health cards are not accepted as primary identification but can be used to supplement another valid ID.</strong>
+                                </p>
+                            
+                                <p>
+                                    <strong>Important:</strong> Piercings will not be performed without acceptable identification. Failure to bring proper ID to your appointment may result in the full price of the piercing being charged and the appointment being marked as a ‘no-show’.
+                                </p>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseBeforeBook2" aria-expanded="false" aria-controls="collapseBeforeBook2">
+                            Age Requirements
+                        </button>
+                    </h2>
+                    <div id="collapseBeforeBook2" class="accordion-collapse collapse" data-bs-parent="#accordionBeforeBook">
+                        <div class="accordion-body">
+                            <section id="age-policy">
+                                <p>
+                                    We do not pierce individuals under the age of 10. Additionally, clients are asked not to bring children under 10 to accompany them to their appointments. For minors aged 10-15, we will perform no more than two piercings in a single session.
+                                </p>
+                                
+                                <h5>Age-Specific Piercing Guidelines:</h5>
+                                <ul>
+                                    <li><strong>10+:</strong> Single Lobe, Double Lobe</li>
+                                    <li><strong>13+:</strong> Helix (including Forward Helix), Flat, Tragus, Rook, Daith, Conch</li>
+                                    <li><strong>14+:</strong> Nostril, Septum, Navel</li>
+                                    <li><strong>16+:</strong> All piercings except nipple and genital</li>
+                                    <li><strong>18+:</strong> All piercings</li>
+                                </ul>
+                                
+                                <p>
+                                    For clients aged 10-15, a parent or legal guardian must accompany them to their appointment. Both the minor and their guardian must present valid government-issued identification.
+                                </p>
+                            
+                                <p>
+                                    Please note that extended family members or close friends cannot act as legal guardians for the purpose of the appointment, regardless of their relationship or residency status. If you arrive without the proper legal guardian, we will be unable to proceed with the piercing and you may be charged the full cost of the appointment as a ‘no show’.
+                                </p>
+                            
+                                <p>
+                                    <strong>Important:</strong> If you are a legal guardian through adoption or have been granted custody of the minor, you must provide proof of guardianship at the appointment.
+                                </p>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseBeforeBook3" aria-expanded="false" aria-controls="collapseBeforeBook3">
+                            Forms of Payment
+                        </button>
+                    </h2>
+                    <div id="collapseBeforeBook3" class="accordion-collapse collapse" data-bs-parent="#accordionBeforeBook">
+                        <div class="accordion-body">
+                            <section id="payment-options">
+                                <p>We accept various payment methods for your convenience:</p>
+                                <ul>
+                                    <li>Most major credit cards, including American Express</li>
+                                    <li>Interac</li>
+                                    <li>Cash</li>
+                                </ul>
+                                <p>While we accept credit gift cards in theory, our payment terminal may have difficulty processing them reliably. Therefore, we advise against relying solely on credit gift cards for payment.</p>
+                                <p>Please note that we are unable to split payments between multiple cards. However, you can split payment between a card and cash if needed.</p>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section: Aftercare -->
+            <h3>Aftercare</h3>
+            <div class="accordion accordion-flush" id="accordionAftercare">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseAftercare1" aria-expanded="false" aria-controls="collapseAftercare1">
+                            How to treat a new piercing?
+                        </button>
+                    </h2>
+                    <div id="collapseAftercare1" class="accordion-collapse collapse" data-bs-parent="#accordionAftercare">
+                        <div class="accordion-body">
+                            <section id="aftercare">
+                                <p>Your piercer may tailor aftercare instructions to suit your individual piercing, body, and healing process. Follow their recommendations for best results.</p>
+                                
+                                <h5>Cleaning Instructions</h5>
+                                <p>We generally advise cleaning your piercing twice a day. Here's how:</p>
+                                <ol>
+                                    <li><strong>Prepare:</strong> Wash your hands thoroughly and set up in a clean area.</li>
+                                    <li><strong>Sterile Saline Solution:</strong> Spray both the front and back of your piercing with a sterile saline solution. This should be the only product used for cleaning, aside from water.</li>
+                                    <li><strong>Rinse:</strong> Dampen a clean piece of paper towel with warm water and use it to gently rinse off the saline solution, removing any buildup or crusties.</li>
+                                    <li><strong>Dry:</strong> Use a new piece of clean, dry paper towel or a hair dryer on a low cool setting to completely dry the area. Be gentle to avoid pushing the jewelry in and out of the piercing channel.</li>
+                                </ol>
+                                
+                                <h5>Post-Cleaning Care</h5>
+                                <p>Once your piercing is clean and dry, leave it alone as much as possible. Avoid irritants like sleeping on the piercing, touching or playing with it, submerging it in water, applying creams or makeup, and bumping or snagging the piercing.</p>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseAftercare2" aria-expanded="false" aria-controls="collapseAftercare2">
+                            How do I know when a piercing is fully healed?
+                        </button>
+                    </h2>
+                    <div id="collapseAftercare2" class="accordion-collapse collapse" data-bs-parent="#accordionAftercare">
+                        <div class="accordion-body">
+                            <section id="healing-process">
+                                <p>The healing process begins immediately after your piercing. Here's what to expect at different stages:</p>
+                                
+                                <h5>1. Initial Reaction (1-2 Weeks)</h5>
+                                <p>&emsp;&ensp;<strong>Symptoms:</strong> Inflammation, bleeding, bruising, and tenderness.</p>
+                                <p>&emsp;&ensp;<strong>Duration:</strong> These symptoms typically last 1-2 weeks but may take longer to subside.</p>
+                                
+                                <h5>2. Regeneration Phase (A Few Days to Several Weeks)</h5>
+                                <p>&emsp;&ensp;<strong>Secretions:</strong> Expect some off-white or yellowish discharge (serous exudate) and crusting around the jewelry.</p>
+                                <p>&emsp;&ensp;<strong>Cleaning:</strong> Regular cleaning is crucial throughout this phase to manage the buildup of secretions.</p>
+                                
+                                <h5>3. Fistula Formation (Several Months)</h5>
+                                <p>&emsp;&ensp;<strong>Scar Tissue:</strong> Your body builds a secure tube of skin (fistula) around the jewelry.</p>
+                                <p>&emsp;&ensp;<strong>Jewelry Stability:</strong> This process is why the angle of your piercing can't be adjusted after healing starts.</p>
+                                <p>&emsp;&ensp;<strong>Perceived Healing:</strong> Piercings heal from the outside in, making them appear healed sooner than they actually are.</p>
+                                <p>&emsp;&ensp;<strong>Check-Ups:</strong> We recommend regular check-ups to monitor progress or before changing jewelry.</p>
+                                
+                                <h5>Healing Timelines</h5>
+                                <p>These timelines are general guidelines; individual healing times may vary:</p>
+                                <ul>
+                                    <li><strong>Soft Tissue Piercings:</strong> 3-6 months</li>
+                                    <li><strong>Cartilage Piercings:</strong> 6-12 months</li>
+                                    <li><strong>Nipple, Navel, Genital, and Dermal Piercings:</strong> 6-12+ months</li>
+                                </ul>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseAftercare3" aria-expanded="false" aria-controls="collapseAftercare3">
+                            Does it hurt?
+                        </button>
+                    </h2>
+                    <div id="collapseAftercare3" class="accordion-collapse collapse" data-bs-parent="#accordionAftercare">
+                        <div class="accordion-body">
+                            <section id="pain-tolerance">
+                                <p>It's normal to experience some level of discomfort or pain during a piercing procedure. Pain tolerance varies among individuals and can be influenced by attitude.</p>
+                                <p>While it's natural to feel nervous beforehand, the sensation of a piercing is typically brief—a quick pinch or pressure that subsides quickly. Once you see your stunning new jewelry, any discomfort will likely be forgotten.</p>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section: General -->
+            <h3>General</h3>
+            <div class="accordion accordion-flush" id="accordionGeneral">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseGeneral1" aria-expanded="false" aria-controls="collapseGeneral1">
+                            Is there parking available?
+                        </button>
+                    </h2>
+                    <div id="collapseGeneral1" class="accordion-collapse collapse" data-bs-parent="#accordionGeneral">
+                        <div class="accordion-body">
+                            <section id="parking-info">
+                                <p>
+                                    Hour-long street parking is available on a first-come, first-served basis. Additionally, there are three pay parking lots nearby:
+                                </p>
+                                <ul>
+                                    <li>135 Liberty Ave.</li>
+                                    <li>220 Maplewood Dr.</li>
+                                    <li>175 Cedar St.</li>
+                                </ul>
+                                <p>
+                                    Please plan your parking options in advance. Vanity cannot guarantee parking availability or cover any parking costs.
+                                </p>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseGeneral2" aria-expanded="false" aria-controls="collapseGeneral2">
+                            Cancellations, no-shows, and late policy
+                        </button>
+                    </h2>
+                    <div id="collapseGeneral2" class="accordion-collapse collapse" data-bs-parent="#accordionGeneral">
+                        <div class="accordion-body">
+                            <section id="appointment-policy">
+                                <h5>Cancellation and Rescheduling</h5>
+                                <p>
+                                    Cancel or reschedule your appointment up to 24 hours in advance at no cost. Cancellations or changes within 24 hours will incur a fee of 50% of the appointment price.
+                                </p>
+                            
+                                <h5>No-Show Policy</h5>
+                                <p>
+                                    Missing your appointment without notice will result in a full charge. Calling at the time of your appointment to cancel, reschedule, or report being late may still lead to a ‘no show’ fee.
+                                </p>
+                            
+                                <h5>Late Arrival Policy</h5>
+                                <p>
+                                    Appointments start promptly. Arriving more than 10 minutes late may result in a ‘no show’ charge and we might not be able to accommodate you. For other types of appointments, arriving late will reduce your session time.
+                                </p>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
     <footer>
         <p>&copy; 2024 My Simple Website</p>
     </footer>
+    <script src="./main.js"></script>
 </body>
 </html>
  
