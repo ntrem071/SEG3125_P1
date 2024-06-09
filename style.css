@@ -213,7 +213,9 @@ h3{
     z-index: 10;
 }
 
-
+#m3-content{
+    height:700px;
+}
 .pimg{
     display: none;
 }
@@ -326,33 +328,31 @@ textarea {
 
 .user-details {
     display: flex;
-    align-items: center; /* Align icon and name in the center vertically */
-    gap: 10px; /* Space between the icon and the name */
+    align-items: center; 
+    gap: 10px; 
 }
 
-/* Style for the user icon */
 .user-icon {
     width: 50px;
     height: 50px;
     border-radius: 50%;
     background-color: #ddd;
-    background-image: url('https://placekitten.com/50/50'); /* Placeholder image, replace with desired icon */
+    background-image: url('https://placekitten.com/50/50'); 
     background-size: cover;
     background-position: center;
 }
 
-/* Style for the review content */
 .review-content {
-    flex-grow: 1; /* Allow the content to take the remaining space */
+    flex-grow: 1; 
     display: flex;
-    flex-direction: column; /* Ensure that user details, rating, and text stack vertically */
+    flex-direction: column; 
 }
 
-/* Style for the user name */
+
 .user-name {
     font-size: 0.9em;
     color: #777;
-    margin: 0; /* Reset margin */
+    margin: 0; 
 }
 
 
